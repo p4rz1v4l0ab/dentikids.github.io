@@ -1,0 +1,419 @@
+/* ============================================
+   DENTIKIDS - CSS DISEÑO INFANTIL Y DENTAL
+   ============================================ */
+
+/* === VARIABLES DE COLORES === */
+:root {
+  /* Colores principales - Tema dental infantil */
+  --celeste-claro: #87CEEB;
+  --celeste-medio: #4FC3F7;
+  --azul-dental: #2196F3;
+  --verde-menta: #4ECDC4;
+  --verde-claro: #A8E6CF;
+  --amarillo-sol: #FFD93D;
+  --naranja-alegre: #FF9E40;
+  --rosa-suave: #FFB6C1;
+  --morado-jugueton: #9B7EDE;
+  --blanco-diente: #FFFFFF;
+  --gris-claro: #F5F7FA;
+  --gris-medio: #E0E7EF;
+  --texto-oscuro: #2C3E50;
+  --texto-claro: #5A6C7D;
+}
+
+/* === RESET Y BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Sans MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #E3F2FD 0%, #FFF9C4 100%);
+  color: var(--texto-oscuro);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* === NAVEGACIÓN === */
+nav {
+  background: linear-gradient(90deg, var(--celeste-medio) 0%, var(--verde-menta) 100%);
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 5px solid var(--amarillo-sol);
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--blanco-diente);
+  text-shadow: 3px 3px 0 var(--azul-dental);
+  letter-spacing: 2px;
+  animation: bounce 2s infinite;
+  flex-shrink: 0;
+}
+
+/* Contenedor del menú */
+nav > ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  color: var(--blanco-diente);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.7rem 1.3rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+nav a:hover {
+  background: var(--amarillo-sol);
+  color: var(--azul-dental);
+  transform: scale(1.1) rotate(-3deg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón hamburguesa (oculto en desktop) */
+.menu-toggle {
+  display: none;
+  background: var(--amarillo-sol);
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: rotate(90deg);
+  background: var(--naranja-alegre);
+}
+
+/* === SECCIONES PRINCIPALES === */
+div[id] {
+  background: var(--blanco-diente);
+  margin: 3rem auto;
+  padding: 3rem;
+  max-width: 1200px;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 5px solid var(--celeste-claro);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decoración de burbujas */
+div[id]::before {
+  content: '🦷';
+  position: absolute;
+  font-size: 8rem;
+  opacity: 0.05;
+  right: -2rem;
+  top: -2rem;
+  animation: float 6s ease-in-out infinite;
+}
+
+div[id]::after {
+  content: '✨';
+  position: absolute;
+  font-size: 5rem;
+  opacity: 0.08;
+  left: -1rem;
+  bottom: -1rem;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* === PLUS (VALOR AÑADIDO) === */
+#Plus-Valor-Anadido-o-Ventaja-Competitiva {
+  background: linear-gradient(135deg, var(--verde-claro) 0%, var(--celeste-claro) 100%);
+  border: 6px dashed var(--verde-menta);
+}
+
+#Plus-Valor-Anadido-o-Ventaja-Competitiva::before {
+  content: '⭐';
+  font-size: 10rem;
+}
+
+/* === MISIÓN Y VISIÓN === */
+#Mision-y-Vision {
+  background: linear-gradient(135deg, var(--rosa-suave) 0%, var(--morado-jugueton) 50%, var(--celeste-medio) 100%);
+  color: var(--blanco-diente);
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 2;
+  border: 6px solid var(--morado-jugueton);
+}
+
+/* === PLANES DE PRECIOS === */
+#plan1, #plan2, #plan3, #extras {
+  background: var(--blanco-diente);
+  padding: 2.5rem;
+  margin: 2rem;
+  border-radius: 25px;
+  border: 4px solid var(--celeste-medio);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+#plan1 {
+  border-color: var(--verde-menta);
+  background: linear-gradient(to bottom, #ffffff 0%, #E8F5E9 100%);
+}
+
+#plan2 {
+  border-color: var(--celeste-medio);
+  background: linear-gradient(to bottom, #ffffff 0%, #E3F2FD 100%);
+}
+
+#plan3 {
+  border-color: var(--amarillo-sol);
+  background: linear-gradient(to bottom, #ffffff 0%, #FFF9C4 100%);
+  border-width: 6px;
+  transform: scale(1.05);
+}
+
+#plan3::before {
+  content: '🏆 PREMIUM';
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background: var(--amarillo-sol);
+  color: var(--texto-oscuro);
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#extras {
+  border-color: var(--naranja-alegre);
+  background: linear-gradient(to bottom, #ffffff 0%, #FFE0B2 100%);
+}
+
+div[id*="plan"]:hover,
+#extras:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* === BUYER PERSON === */
+#Buyer-Person {
+  background: linear-gradient(135deg, var(--rosa-suave) 0%, var(--celeste-claro) 100%);
+  border: 5px solid var(--rosa-suave);
+}
+
+#Buyer-Person::before {
+  content: '👨‍👩‍👧';
+  font-size: 8rem;
+}
+
+/* === TIPO DE PRODUCCIÓN === */
+#Tipo-de-Produccion {
+  background: linear-gradient(135deg, var(--gris-claro) 0%, var(--blanco-diente) 100%);
+  border: 5px solid var(--azul-dental);
+}
+
+/* === UBICACIÓN === */
+#Posicion-Geografica-y-Datos-Economicos-ubicacion {
+  background: linear-gradient(135deg, var(--verde-claro) 0%, var(--verde-menta) 100%);
+  border: 5px solid var(--verde-menta);
+}
+
+#Posicion-Geografica-y-Datos-Economicos-ubicacion::before {
+  content: '📍';
+  font-size: 10rem;
+}
+
+/* === CONCLUSIONES === */
+#Conclusiones {
+  background: linear-gradient(135deg, var(--amarillo-sol) 0%, var(--naranja-alegre) 100%);
+  border: 6px solid var(--naranja-alegre);
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 4rem;
+  color: var(--texto-oscuro);
+}
+
+#Conclusiones::before {
+  content: '🎉';
+  font-size: 12rem;
+  opacity: 0.1;
+}
+
+/* === ANIMACIONES === */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* === ELEMENTOS DECORATIVOS === */
+br {
+  display: block;
+  margin: 1rem 0;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 968px) {
+  nav {
+    padding: 1rem 1.5rem;
+  }
+  
+  nav > ul {
+    gap: 0.3rem;
+  }
+  
+  nav a {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+  
+  .logo {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+  
+  .menu-toggle {
+    display: block;
+    order: 2;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    order: 1;
+  }
+  
+  nav > ul {
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+    order: 3;
+    gap: 0.5rem;
+    margin-top: 0;
+  }
+  
+  nav > ul.active {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 1rem;
+  }
+  
+  nav a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  div[id] {
+    margin: 2rem 1rem;
+    padding: 2rem 1.5rem;
+  }
+  
+  #plan3 {
+    transform: scale(1);
+  }
+  
+  div[id]::before,
+  div[id]::after {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  div[id] {
+    margin: 1.5rem 0.5rem;
+    padding: 1.5rem 1rem;
+  }
+  
+  #Conclusiones {
+    padding: 2rem 1rem;
+  }
+}
+
+/* === EFECTOS ADICIONALES INFANTILES === */
+.logo:hover {
+  animation: none;
+  transform: rotate(360deg);
+  transition: transform 0.6s ease;
+}
+
+/* Efecto de brillo en secciones */
+div[id]:hover::before {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* === ACCESIBILIDAD === */
+:focus {
+  outline: 3px solid var(--amarillo-sol);
+  outline-offset: 3px;
+}
+
+/* === IMPRESIÓN === */
+@media print {
+  nav {
+    display: none;
+  }
+  
+  div[id] {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 2px solid var(--texto-oscuro);
+  }
+}
